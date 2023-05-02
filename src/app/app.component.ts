@@ -6,13 +6,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Importante', url: '/folder/Importante', icon: 'warning' },
+    { title: 'Compras', url: '/folder/Compras', icon: 'calculator' },
+    { title: 'FLV', url: '/folder/Flv', icon: 'nutrition' },
+    { title: 'Breakfast', url: '/folder/Breakfast', icon: 'cafe' },
+    { title: 'Mercearia', url: '/folder/Mercearia', icon: 'bag' },
+    { title: 'Talho', url: '/folder/Talho', icon: 'fish' },
+    { title: 'Higiene', url: '/folder/Higiene', icon: 'accessibility' },
+    { title: 'Limpeza', url: '/folder/Limpeza', icon: 'sparkles' },
+    { title: 'Rafaela', url: '/folder/Rafaela', icon: 'heart' },
+    { title: 'Farmácia', url: '/folder/Farmacia', icon: 'bandage' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = ['Teste'];
   constructor() {}
 }
+
