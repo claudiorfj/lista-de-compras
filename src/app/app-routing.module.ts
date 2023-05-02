@@ -9,12 +9,12 @@ const routes: Routes = [
   },
   {
     path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    loadChildren: () => import('./pages/folder/folder.module').then( m => m.FolderPageModule)
   },
 
   {
     path: 'importante',
-    loadChildren: () => import('./importante/importante.module').then( m => m.ImportantePageModule)
+    loadChildren: () => import('./pages/importante/importante.module').then( m => m.ImportantePageModule)
   },
 
 ];
