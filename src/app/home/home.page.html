@@ -1,0 +1,94 @@
+<ion-split-pane>
+  <ion-menu contentId="content">
+    <ion-header >
+      <ion-toolbar>
+        <ion-title>
+          <ion-icon size="4" name="cart-outline"></ion-icon>
+          Quick List 
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-list id="inbox-list">
+        <ion-menu-toggle auto-hide="false" *ngFor="let sector of sectorMenu; let i = index">
+          <ion-item routerDirection="root" [routerLink]="[sector.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon aria-hidden="true" slot="start" [ios]="sector.icon + '-outline'" [md]="sector.icon + '-sharp'"></ion-icon>
+            <ion-label>{{ sector.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+
+      <ion-list id="labels-list" *ngIf="labels.length !== 0">
+        <ion-list-header>Lembretes</ion-list-header>
+
+        <ion-item *ngFor="let label of labels" lines="none">
+          <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+          <ion-label>{{ label }}</ion-label>
+        </ion-item>
+      </ion-list>
+
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="content" main>
+
+  </ion-router-outlet>
+
+  <div class="ion-page" id="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Compras</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+
+      <ion-list>
+        <ion-card>
+          <ion-title>
+            <ion-card-header>
+              <b>Total: {{ getTotal() | currency: 'EUR' }} </b>
+            </ion-card-header>
+          </ion-title>
+        </ion-card>
+        <ion-card *ngFor="let p of products">
+          <ion-card-header class="flex-container">
+            <ion-card-title>{{ p.name }}</ion-card-title>
+            <ion-text class="ion-text-end">
+              <div style="position: absolute; right: 16px; font-size: 1.4rem">
+                {{ p.price | currency: 'EUR'}}
+              </div>
+            </ion-text>
+            <ion-card-subtitle>{{ p.sector }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-row class="ion-align-items-center">
+            <ion-row class="ion-align-items-center">
+              <ion-button fill="clear" (click)="addToCart(p)">
+                <ion-icon class="cart-icon" name="add-circle" slot="icon-only"></ion-icon>
+              </ion-button>
+
+              <b>{{ p.amount }}</b>
+
+              <ion-button
+                color="medium"
+                fill="clear"
+                (click)="decreaseCartItem(p)"
+              >
+                <ion-icon class="cart-icon" name="remove-circle" slot="icon-only"></ion-icon>
+              </ion-button>
+
+              <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
+                <ion-icon class="cart-icon" name="close-circle" slot="icon-only"></ion-icon>
+              </ion-button>
+
+            </ion-row>
+          </ion-row>
+        </ion-card>
+      </ion-list>
+      
+    </ion-content>
+  </div>
+</ion-split-pane>

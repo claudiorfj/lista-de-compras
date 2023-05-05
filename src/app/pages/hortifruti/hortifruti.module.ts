@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ImportantePageRoutingModule } from './importante-routing.module';
+import { HortifrutiPageRoutingModule } from './hortifruti-routing.module';
 
-import { ImportantePage } from './importante.page';
+import { HortifrutiPage } from './hortifruti.page';
 import { SideMenuModule } from 'src/app/components/side-menu/side-menu.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SideMenuModule } from 'src/app/components/side-menu/side-menu.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ImportantePageRoutingModule,
+    HortifrutiPageRoutingModule,
     SideMenuModule
   ],
-  declarations: [ImportantePage]
+  declarations: [HortifrutiPage]
 })
-export class ImportantePageModule {}
+export class HortifrutiPageModule {}

@@ -1,0 +1,32 @@
+<ion-menu contentId="main-content">
+  <ion-header >
+    <ion-toolbar>
+      <ion-title>
+        <ion-icon size="4" name="cart-outline"></ion-icon>
+        Quick List 
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+    <ion-list id="inbox-list">
+      <ion-menu-toggle auto-hide="false" *ngFor="let sector of sectorMenu; let i = index">
+        <ion-item routerDirection="root" [routerLink]="[sector.url]" lines="none" detail="false" routerLinkActive="selected">
+          <ion-icon aria-hidden="true" slot="start" [ios]="sector.icon + '-outline'" [md]="sector.icon + '-sharp'"></ion-icon>
+          <ion-label>{{ sector.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+
+    <ion-list id="labels-list" *ngIf="labels.length !== 0">
+      <ion-list-header>Lembretes</ion-list-header>
+
+      <ion-item *ngFor="let label of labels" lines="none">
+        <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+        <ion-text>{{ label }}</ion-text>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
