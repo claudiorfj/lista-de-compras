@@ -9,5 +9,48 @@
       <ion-title>Compras</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding"> conteudo de compras </ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-card>
+        <ion-title>
+          <ion-card-header>
+            <b>Total: {{ getTotal() | currency: 'EUR' }} </b>
+          </ion-card-header>
+        </ion-title>
+      </ion-card>
+      <ion-card *ngFor="let p of products">
+        <ion-card-header class="flex-container">
+          <ion-card-title>{{ p.name }}</ion-card-title>
+          <ion-text class="ion-text-end">
+            <div style="position: absolute; right: 16px; font-size: 1.4rem">
+              {{ p.price | currency: 'EUR'}}
+            </div>
+          </ion-text>
+          <ion-card-subtitle>{{ p.sector }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-row class="ion-align-items-center">
+          <ion-row class="ion-align-items-center">
+            <ion-button fill="clear" (click)="addToCart(p)">
+              <ion-icon class="cart-icon" name="add-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+
+            <b>{{ p.amount }}</b>
+
+            <ion-button
+              color="medium"
+              fill="clear"
+              (click)="decreaseCartItem(p)"
+            >
+              <ion-icon class="cart-icon" name="remove-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+
+            <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
+              <ion-icon class="cart-icon" name="close-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+
+          </ion-row>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+  </ion-content>
 </div>
