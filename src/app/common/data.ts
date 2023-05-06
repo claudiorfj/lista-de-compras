@@ -2,7 +2,7 @@ export const SectorMenu = [
   { title: 'Importante', url: '/home/importante', icon: 'warning', isSelected: false },
   { title: 'Compras', url: '/home/compras', icon: 'calculator', isSelected: false },
   { title: 'Hortifruti', url: '/home/hortifruti', icon: 'nutrition', isSelected: false },
-  { title: 'Café da Manhã', url: '/home/Café da Manhã', icon: 'cafe', isSelected: false },
+  { title: 'Café da Manhã', url: '/home/breakfast', icon: 'cafe', isSelected: false },
   { title: 'Mercearia', url: '/home/mercearia', icon: 'pizza', isSelected: false },
   { title: 'Talho', url: '/home/talho', icon: 'fish', isSelected: false },
   { title: 'Higiene', url: '/home/higiene', icon: 'accessibility', isSelected: false },
