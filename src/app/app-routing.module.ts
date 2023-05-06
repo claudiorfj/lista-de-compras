@@ -26,6 +26,34 @@ const routes: Routes = [
         path: 'breakfast',
         loadChildren: () => import('./pages/breakfast/breakfast.module').then( m => m.BreakfastPageModule)
       },
+      {
+        path: 'mercearia',
+        loadChildren: () => import('./pages/mercearia/mercearia.module').then( m => m.MerceariaPageModule)
+      },
+      {
+        path: 'talho',
+        loadChildren: () => import('./pages/talho/talho.module').then( m => m.TalhoPageModule)
+      },
+      {
+        path: 'higiene',
+        loadChildren: () => import('./pages/higiene/higiene.module').then( m => m.HigienePageModule)
+      },
+      {
+        path: 'limpeza',
+        loadChildren: () => import('./pages/limpeza/limpeza.module').then( m => m.LimpezaPageModule)
+      },
+      {
+        path: 'bebidas',
+        loadChildren: () => import('./pages/bebidas/bebidas.module').then( m => m.BebidasPageModule)
+      },
+      {
+        path: 'extras',
+        loadChildren: () => import('./pages/extras/extras.module').then( m => m.ExtrasPageModule)
+      },
+      {
+        path: 'farmacia',
+        loadChildren: () => import('./pages/farmacia/farmacia.module').then( m => m.FarmaciaPageModule)
+      },
     ]
   },
 ];
