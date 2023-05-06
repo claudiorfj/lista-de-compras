@@ -20,12 +20,7 @@ export class SideMenuComponent  implements OnInit {
     for (let i = 0; i < this.sectorMenu.length; i++) {
       this.sectorMenu[i].isSelected = false;
     }
-  
     sector.isSelected = true;
-    console.log('sector.isSelected', sector.isSelected)
-  
-    // navega para a página selecionada
-    // this.navController.navigateRoot(item.url);
   }
 
 }
