@@ -8,7 +8,7 @@ export const SectorMenu = [
   { title: 'Higiene', url: '/home/higiene', icon: 'accessibility', isSelected: false },
   { title: 'Limpeza', url: '/home/limpeza', icon: 'sparkles', isSelected: false },
   { title: 'Bebidas', url: '/home/bebidas', icon: 'beer', isSelected: false },
-  { title: 'Rafaela', url: '/home/rafaela', icon: 'heart', isSelected: false },
+  { title: 'Rafaela', url: '/home/extras', icon: 'heart', isSelected: false },
   { title: 'Farmácia', url: '/home/farmacia', icon: 'bandage', isSelected: false },
 ];
 
