@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SideMenuModule } from 'src/app/components/side-menu/side-menu.module';
+import { Labels, SectorMenu } from 'src/app/common/data';
 
 @Component({
   selector: 'app-hortifruti',
@@ -7,6 +7,9 @@ import { SideMenuModule } from 'src/app/components/side-menu/side-menu.module';
   styleUrls: ['./hortifruti.page.scss'],
 })
 export class HortifrutiPage implements OnInit {
+
+  public sectorMenu = SectorMenu
+  public labels = Labels
 
   constructor() { }
 
