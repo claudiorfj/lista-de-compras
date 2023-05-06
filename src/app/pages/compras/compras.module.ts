@@ -10,13 +10,13 @@ import { ComprasPage } from './compras.page';
 import { SideMenuModule } from 'src/app/components/side-menu/side-menu.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ComprasPageRoutingModule,
-    SideMenuModule
-  ],
-  declarations: [ComprasPage, ]
+    declarations: [ComprasPage,],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        ComprasPageRoutingModule,
+        SideMenuModule,
+    ]
 })
 export class ComprasPageModule {}

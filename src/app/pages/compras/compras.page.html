@@ -1,5 +1,11 @@
 <app-side-menu></app-side-menu>
 
+<ion-fab vertical="center" horizontal="end" >
+  <ion-fab-button (click)="openCreateModal()" #create>
+    <ion-icon name="add" class="create-icon"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>

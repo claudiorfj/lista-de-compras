@@ -4,6 +4,8 @@ import { BehaviorSubject } from 'rxjs';
 import { SectorMenu, Labels } from 'src/app/common/data';
 import { IProduct } from 'src/app/interfaces/IProduct';
 import { CartService } from 'src/app/services/cart.service';
+import { ModalController } from '@ionic/angular';
+import { CreateItemModalPage } from '../create-item-modal/create-item-modal.page';
 
 @Component({
   selector: 'app-compras',
@@ -22,6 +24,7 @@ export class ComprasPage implements OnInit {
   constructor(
     private cartService: CartService,
     private router: Router,
+    private modalCtrl: ModalController,
   ) {}
 
   ngOnInit() {
@@ -51,6 +54,14 @@ export class ComprasPage implements OnInit {
 
   removeCartItem(product: IProduct) {
     this.cartService.removeProduct(product);
+  }
+
+  async openCreateModal(){
+    let modal = await this.modalCtrl.create({
+      component: CreateItemModalPage,
+      cssClass: 'create-modal'
+    })
+    modal.present()
   }
 
 }
