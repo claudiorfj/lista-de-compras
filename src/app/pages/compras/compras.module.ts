@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { ComprasPageRoutingModule } from './compras-routing.module';
 
 import { ComprasPage } from './compras.page';
+import { SideMenuModule } from 'src/app/components/side-menu/side-menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ComprasPageRoutingModule
+    ComprasPageRoutingModule,
+    SideMenuModule
   ],
-  declarations: [ComprasPage]
+  declarations: [ComprasPage, ]
 })
 export class ComprasPageModule {}
