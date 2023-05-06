@@ -12,24 +12,10 @@ import { Router, RouterEvent } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  
   cart: IProduct[] = [];
   products: IProduct[] = [];
   cartItemCount!: BehaviorSubject<number>;
-  public sectorMenu = [
-    { title: 'Importante', url: '/home/importante', icon: 'warning' },
-    { title: 'Compras', url: '/home/Compras', icon: 'calculator' },
-    { title: 'Hortifruti', url: '/home/hortifruti', icon: 'nutrition' },
-    { title: 'Café da Manhã', url: '/home/Café da Manhã', icon: 'cafe' },
-    { title: 'Mercearia', url: '/home/Mercearia', icon: 'pizza' },
-    { title: 'Talho', url: '/home/Talho', icon: 'fish' },
-    { title: 'Higiene', url: '/home/Higiene', icon: 'accessibility' },
-    { title: 'Limpeza', url: '/home/Limpeza', icon: 'sparkles' },
-    { title: 'Bebidas', url: '/home/Bebidas', icon: 'beer' },
-    { title: 'Rafaela', url: '/home/Rafaela', icon: 'heart' },
-    { title: 'Farmácia', url: '/home/Farmacia', icon: 'bandage' },
-  ];
-  public labels = ['Saco do Mercado'];
-
 
   constructor(
     private cartService: CartService,
