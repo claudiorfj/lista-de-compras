@@ -12,7 +12,14 @@
 
     <ion-list id="inbox-list">
       <ion-menu-toggle auto-hide="false" *ngFor="let sector of sectorMenu; let i = index">
-        <ion-item routerDirection="root" [routerLink]="[sector.url]" lines="none" detail="false" routerLinkActive="selected">
+        <ion-item 
+          routerDirection="root" 
+          [routerLink]="[sector.url]" 
+          lines="none" detail="false" 
+          routerLinkActive="selected"
+          [ngClass]="{ 'selected': sector.isSelected }"
+          (click)="selectItem(sector)"
+          >
           <ion-icon aria-hidden="true" slot="start" [ios]="sector.icon + '-outline'" [md]="sector.icon + '-sharp'"></ion-icon>
           <ion-label>{{ sector.title }}</ion-label>
         </ion-item>
