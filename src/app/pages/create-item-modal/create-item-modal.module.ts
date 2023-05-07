@@ -13,7 +13,7 @@ import { CreateItemModalPage } from './create-item-modal.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CreateItemModalPageRoutingModule
+    CreateItemModalPageRoutingModule,
   ],
   declarations: [CreateItemModalPage]
 })
