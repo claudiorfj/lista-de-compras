@@ -27,7 +27,11 @@
 
 
 .create-modal {
-  --height: 50%;
+  --height: 40%;
   --border-radius: 10px;
   padding: 25px;
+}
+
+ion-content {
+  --background: #1E1E1E;
 }
